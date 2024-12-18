@@ -71,7 +71,7 @@ if i < 50:
     print('i is odd:')
 print(f'i is {i}')
 
-
+print()
 print("Loop Exercises")
 print()
 
