@@ -50,15 +50,15 @@ except:
     print("Invalid Input! Please enter a number.")
 
 
-# Handling specific errors with try-except block
-# File missing error
+# # Handling specific errors with try-except block
+# # File missing error
 
 try:
-    with open('text.txt', 'r') as file:
+    with open('fle.txt', 'r') as file:
         content = file.read()
         print(content)
-except FileNotFoundError:
-    print("File not found!")
+except Exception as e:
+    print(f"File not found! {e}")
 
 
 
