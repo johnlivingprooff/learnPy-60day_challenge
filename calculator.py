@@ -1,4 +1,7 @@
-# a basic calculator (supports addition, subtraction,  multiplication, and division). 
+'''
+A basic calculator (supports addition, subtraction,  multiplication, and division).
+Calculator collects user input for the operator and two numbers, then performs the operation and prints the result to the console.
+'''
 
 def add(a, b):
     return a + b
