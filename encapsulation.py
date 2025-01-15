@@ -8,7 +8,7 @@ class BankAccount:
     def __init__(self, owner, acct_id, balance):
         self.owner = owner
         self.acct_id = acct_id
-        self.__balance = balance
+        self.__balance = balance # Private Attribute 
 
     def get_balance(self):
         return self.__balance
@@ -36,13 +36,10 @@ class CurrentAccount(BankAccount):
     
     overdraft = 1000 # class variable
 
-    def __init__(self, owner, acct_id, balance):
-        super().__init__(owner, acct_id, balance)
-        self.__balance = balance
-
     def withdraw(self, amount):
-        if amount <= (self.__balance + self.overdraft):
-            self.__balance -= amount
+        # get current balance with BankAccount getter method
+        if amount <= (self.get_balance() + self.overdraft):
+            super().withdraw(amount)
             print(f'Dear {self.owner},\nYou have successfully withdrawn: {amount}')
         else:
             print(f'Dear {self.owner},\nYou have Insufficient funds')
@@ -51,22 +48,23 @@ class CurrentAccount(BankAccount):
         print('Any number: ', BankAccount.any_num)
 
     def check_balance(self):
-        print(f'Dear {self.owner},\nYour current balance is: {self.__balance} and your overdraft is: {self.overdraft}')
+        # get current balance with BankAccount getter method
+        current_balance = self.get_balance()
+        print(f'Dear {self.owner},\nYour current balance is: {current_balance} and your overdraft is: {self.overdraft}')
 
 class SavingsAccount(BankAccount):
     
     interest_rate = 0.5
 
-    def __init__(self, owner, acct_id, balance):
-        super().__init__(owner, acct_id, balance)
-        self.__balance = balance
-
     def add_interest(self):
-        self.__balance += (self.__balance * self.interest_rate) # 1,000 + (1,000 * 0.5)
+        interest = self.get_balance() * self.interest_rate
+        self.deposit(interest) # use the parent class deposit method
         print(f"Dear {self.owner},\n {self.interest_rate * 100}% interest has been added to your account")
 
     def check_balance(self):
-        print(f'Dear {self.owner},\nYour current balance is: {self.__balance} and your interest rate is: {self.interest_rate * 100}%')
+        # get current balance with BankAccount getter method
+        current_balance = self.get_balance()
+        print(f'Dear {self.owner},\nYour current balance is: {current_balance} and your interest rate is: {self.interest_rate * 100}%')
 
 
 # creating objects
