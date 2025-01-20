@@ -1,11 +1,11 @@
-﻿customer name,COMPANY NAME,EMAIL
-Orbis Travels,Orbis Travels,-
-UNAIDS,UNAIDS,-
-Victor Sheki,UNRCO,victor.sheki@un.org
-Andrew Zimba,DANISH RED CROSS,anzim@rodekors.dk
-Maryland University,MGIC,N/A
-un sacco,UN SACCO,N/A
-NICO GENERAL,NICO GENERAL,
+﻿customer name,COMPANY NAME,EMAIL,numbers
+Orbis Travels,Orbis Travels,-,5
+UNAIDS,UNAIDS,-,15
+Victor Sheki,UNRCO,victor.sheki@un.org,450
+Andrew Zimba,DANISH RED CROSS,anzim@rodekors.dk,120
+Maryland University,MGIC,N/A,0
+un sacco,UN SACCO,N/A,36
+NICO GENERAL,NICO GENERAL,45
 Habitat ,Habitat,
 Habitat ,Habitat,
 Mr. Zimba,Danish Red Cross,-
@@ -15,7 +15,7 @@ Lawrence Dzumani,Welthungerhilfe,lawrence.dzumani@welthungerhilfe.de
 Nellie Mbedza,Lilongwe City Council,nelliembedza@gmail.com
 Tamanda,The Healing Process Initiative,tamandanifov@gmail.com
 NFRA,NFRA,-
-Good Neighbours,Good Neighbours,-
+Good Neighbours,Good Neighbours,-,123
 Makunganya E.,ESCOM,gmoyo@escom.mw
 NICO GENERAL,NICO GENERAL,-
 World Vision,World Vision,-
@@ -27,7 +27,7 @@ Innocent Mangulama,Family Planning Association of Malawi, imangulama@fpamalawi.
 Paradiso TB Patients Trust,Paradiso TB Patients Trust,-
 NFRA,NFRA,-
 TEST,TEST,
-TCC,Tobacco Control Commission,-
+TCC,Tobacco Control Commission,-,125
 Habitat ,Habitat,-
 Habitat ,Habitat,-
 Nellie Mbedza,Lilongwe City Council,-
@@ -38,7 +38,7 @@ Sabine Rozestraten,Lowani Safaris ,info.lowanisafarisnl@gmail.com
 Ellen Musa,Embassy of Ireland,Ellen.Musa@dfa.ie
 Lawrence Dzumani,Welthungerhilfe,lawrence.dzumani@welthungerhilfe.de
 Ellen Musa,Embassy of Ireland,Ellen.Musa@dfa.ie
-Sabine Rozestraten,Lowani Safaris ,info.lowanisafarisnl@gmail.com
+Sabine Rozestraten,Lowani Safaris ,info.lowanisafarisnl@gmail.com,65
 CICOD ,CICOD ,.
 Concern Worldwide,Concern Worldwide,.
 World Vision,World Vision,.
@@ -46,7 +46,7 @@ Agatha,-,.
 Agatha,-,
 Sabine Rozestraten,Lowani Safaris ,info.lowanisafarisnl@gmail.com
 Zione Njala,National Planning Commission,znjala@npc.mw
-Joshua Nyamula,Lilongwe Wildlife Trust,operations@lilongwewildlife.org
+Joshua Nyamula,Lilongwe Wildlife Trust,operations@lilongwewildlife.org,456
 Felix Dziyende,Good Hope Pvt Hospital,felixdziyende@gmail.com
 Habitat ,Habitat for Humanity - Malawi,.
 Habitat ,Habitat for Humanity - Malawi,.
