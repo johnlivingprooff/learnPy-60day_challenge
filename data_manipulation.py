@@ -17,7 +17,6 @@ print(data.head())  # Display the first 5 rows of the data
 print(data.tail())  # Display the last 5 rows of the data
 print(data)
 print(data['COMPANY NAME'])  # Display the 'COMPANY NAME' column
-print(data['COMPANY NAME', 'customer name'])  # Display multiple columns
 
 print(data['numbers'] > 10)
 
