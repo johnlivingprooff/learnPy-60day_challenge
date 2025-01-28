@@ -86,3 +86,5 @@ person1.deposit(150)
 person1.deposit(50)
 
 person1.withdraw(45)
+
+print(person1.acct_name)

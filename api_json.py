@@ -43,7 +43,7 @@ data = {
     'title': 'foo',
     'body': 'bar',
     'userId': 1
-}
+} # Dictionary
 
 # Converting the data to JSON format
 json_data = json.dumps(data)
