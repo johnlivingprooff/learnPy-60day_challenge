@@ -57,8 +57,15 @@ class Inventory:
         
         def remove_product(self, product_name):
             """ Remove product from product list """
-            self.products = [ p for p in self.products if p.name.lower() != product_name.lower() ]
-            print(f"Product: {product_name} removed added")
+            # self.products = [ p for p in self.products if p.name.lower() != product_name.lower() ]
+            # print(f"Product: {product_name} removed added")
+
+            for product in self.products:
+                if product.name.lower() == product_name.lower():
+                    self.products.remove(product)
+                    print(f"Product: {product_name} removed")
+                    return
+                
 
         def update_stock(self, product_name, new_qty):
             for product in self.products:
@@ -68,7 +75,66 @@ class Inventory:
                     return
             print(f"Product: {product_name} not found")
 
+        def display_inventory(self):
 
+            if not self.products:
+                print('No products in the inventory')
+                return
+            
+            for product in self.products:
+                print(product)
+
+        def save_to_file(self):
+            """Saving the inventory to a JSON File"""
+            with open("inventory.json", "w") as f:
+                json.dump([p.to_dict() for p in self.products], f, indent=4)
+            print("Inventory saved to inventory.json successfully")
+
+        def load_from_file(self):
+            """Get JSON formatted data from the inventory file"""
+            if os.path.exists("inventory.json"):
+                with open("inventory.json", "r") as f:
+                    data = json.load(f)
+                    self.products = [Product(**product) for product in data]
+                print("Inventory loaded from inventory.json successfully")
+
+            else:
+                print("No inventory file found")
+
+class UserInterface:
+
+    def __init__(self):
+        self.inventory = Inventory()
+        self.inventory.load_from_file()
+
+    def display_menu(self):
+        while True:
+            print("\n📦 Inventory Management System")
+            print("1. Add Product")
+            print("2. Remove Product")
+            print("3. Update Stock")
+            print("4. Display Inventory")
+            print("5. Save Inventory")
+            print("6. Exit")
+
+            choice = input("Enter your choice: ")
+
+            if choice == '1':
+                name = input("Enter product name: ")
+                price = float(input("Enter product price: "))
+                category = input("Enter product category: ")
+                qty = int(input("Enter product quantity: "))
+                metric = input("Enter product metric: ")
+
+            elif choice == '2':
+                product_name = input("Enter product name: ")
+                self.inventory.remove_product(product_name)
+                
+
+        
+
+# .. - parent_directory
+# . - current directory
 
                 
        
