@@ -61,7 +61,7 @@ def get_location():
         if forecast_data is not None and "forecast" in forecast_data and "forecastday" in forecast_data["forecast"]:
             return location
         else:
-            print("Invalid location. Please try again.")
+            print("Invalid location. Please try again .")
 
 def main():
     location = get_location()
