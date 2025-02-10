@@ -105,7 +105,7 @@ class UserInterface:
 
     def __init__(self):
         self.inventory = Inventory()
-        self.inventory.load_from_file()
+        # self.inventory.load_from_file()
 
     def display_menu(self):
         while True:
@@ -144,7 +144,7 @@ class UserInterface:
                 
        
 
-# Object
-obj1 = Product('Rice', 50, 'kg', 2500, 'food')
+# Main Function
 
-
+if __name__ == "__main__":
+    UserInterface().display_menu()
