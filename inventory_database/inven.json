@@ -1,0 +1,37 @@
+{
+    "inven": [
+        {
+        "name": "apple",
+        "price": 1000,
+        "quantity": 10
+        },
+        {
+        "name": "banana",
+        "price": 500,
+        "quantity": 5
+        },
+        {
+        "name": "orange",
+        "price": 1500,
+        "quantity": 8
+        }
+    ],
+
+    "inventory": [
+        {
+        "name": "apple",
+        "price": 1000,
+        "quantity": 10
+        },
+        {
+        "name": "banana",
+        "price": 500,
+        "quantity": 5
+        },
+        {
+        "name": "orange",
+        "price": 1500,
+        "quantity": 8
+        }
+    ]
+}
