@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Maize",
+        "price": 500.0,
+        "category": "grain",
+        "qty": 56,
+        "metric": "kg"
+    }
+]
