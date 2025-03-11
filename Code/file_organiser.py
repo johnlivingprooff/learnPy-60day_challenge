@@ -38,11 +38,11 @@ import shutil
 # Step 1: Define the file-type categories
 file_types = {
     "Images": [".jpg", ".jpeg", ".png", ".gif"],
-    "Documents": [".pdf", ".docx", ".txt", ".xls"],
+    "Documents": [".pdf", ".docx", ".txt", ".xls", ".csv"],
     "Videos": [".mp4", ".mkv", ".avi", ".webm"],
     "Music": [".mp3", ".wav", ".flac"],
     "Code": [".py", ".java", ".c", ".cpp", ".html", ".css", ".js"],
-    "Others": []
+    "Others": [".*", ".**", ".***", ".***", ".", ""] # Default category for other file types
 }
 
 # Step 2: Create folders for each file type category
@@ -67,7 +67,10 @@ def move_files(folder_path, file_types):
             for category, extensions in file_types.items():
                 if file_extension in extensions:
                     dest_folder_path = os.path.join(folder_path, category) # created the full file path for each file category
-                    shutil.move(file_path, dest_folder_path)
+                    if not os.path.exists(dest_folder_path):
+                        os.mkdir(dest_folder_path)
+                        shutil.move(file_path, dest_folder_path)
+                    
 
                     print(f"Moved: {file_name} to {category} folder.")
                     break
